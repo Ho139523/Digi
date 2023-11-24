@@ -10840,3 +10840,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+
+.login {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+

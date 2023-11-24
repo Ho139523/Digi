@@ -1,0 +1,28 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% load simple_tags %}
+
+{% block title %} | خانه{% endblock %}
+
+{% block main %}
+<!-- Header-->
+<header class="header bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+        </div>
+    </div>
+</header>
+
+<div class='container-fluid login'>
+    <form method="POST" action="{% url 'shop:login' %}">
+    {% csrf_token %}
+      <div class="mb-3">
+        <input type="text" class="form-control" name='username' placeholder='User Name'>
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name='password' placeholder='Password'>
+      </div>
+      <button type="submit" class="btn btn-secondary">ورود</button>
+    </form>
+</div>
+{% endblock %}
